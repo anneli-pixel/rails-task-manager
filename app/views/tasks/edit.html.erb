@@ -1,8 +1,12 @@
 <h1>Edit a task</h1>
 
-<%= simple_form_for(@task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.input :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="bottom-padding">
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+ <%= link_to "Back to all tasks", tasks_path, class: "btn btn-outline-secondary" %>
